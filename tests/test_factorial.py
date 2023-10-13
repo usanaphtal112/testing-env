@@ -1,7 +1,7 @@
 """
 Unit tests for the calculate_factorial function in the factorial module.
 """
-from factorial import calculate_factorial, check_strong
+from factorial import calculate_factorial, check_strong, check_palindrome
 
 
 def test_factorial():
@@ -28,3 +28,14 @@ def test_strong():
     assert check_strong(40585) == "Strong Number"
     assert check_strong(100000) == "Not Strong Number"
     assert check_strong(0) == "Strong Number"
+
+
+def test_palindrome():
+    """Test the check_palindrome function"""
+
+    assert check_palindrome(121) == "Palindrome Number"
+    assert check_palindrome(100000000001) == "Palindrome Number"
+    assert check_palindrome(21212121) == "Not Palindrome Number"
+    assert check_palindrome(1212121212121) == "Palindrome Number"
+    assert check_palindrome(11) == "Palindrome Number"
+    assert check_palindrome(123243233212) == "Not Palindrome Number"

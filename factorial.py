@@ -39,3 +39,24 @@ def check_strong(input_num):
     if copy_input == strong_num:
         return "Strong Number"
     return "Not Strong Number"
+
+
+def check_palindrome(input_num):
+    """checking if the number is Palindrome
+
+    Args:
+        input_num (int): the number to check weather it is
+        palindrome number or not.
+
+    Returns:
+        str: Palindrome Number or Not Palindrome Number.
+    """
+    copy_input = input_num
+    pal_num = 0
+    while input_num != 0:
+        remainder = input_num % 10
+        pal_num = pal_num * 10 + remainder
+        input_num = input_num // 10
+    if copy_input == pal_num:
+        return "Palindrome Number"
+    return "Not Palindrome Number"
