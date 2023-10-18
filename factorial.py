@@ -60,3 +60,8 @@ def check_palindrome(input_num):
     if copy_input == pal_num:
         return "Palindrome Number"
     return "Not Palindrome Number"
+
+
+def check_number(num):
+    """Summary here"""
+    return num
